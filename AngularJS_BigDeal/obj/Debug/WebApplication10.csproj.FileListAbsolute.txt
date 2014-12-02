@@ -1,0 +1,6 @@
+c:\users\jim\documents\visual studio 2013\Projects\WebApplication10\WebApplication10\bin\WebApplication10.dll.config
+c:\users\jim\documents\visual studio 2013\Projects\WebApplication10\WebApplication10\bin\WebApplication10.dll
+c:\users\jim\documents\visual studio 2013\Projects\WebApplication10\WebApplication10\bin\WebApplication10.pdb
+c:\users\jim\documents\visual studio 2013\Projects\WebApplication10\WebApplication10\obj\Debug\WebApplication10.csprojResolveAssemblyReference.cache
+c:\users\jim\documents\visual studio 2013\Projects\WebApplication10\WebApplication10\obj\Debug\WebApplication10.dll
+c:\users\jim\documents\visual studio 2013\Projects\WebApplication10\WebApplication10\obj\Debug\WebApplication10.pdb

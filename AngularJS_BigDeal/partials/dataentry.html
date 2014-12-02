@@ -1,0 +1,62 @@
+﻿<div>
+    <form id="myForm" name="myForm" novalidate>
+        <fieldset>
+            <div class="form-group">
+                <label for="firstname">First Name:</label>
+                <input type="text"
+                       name="firstname"
+                       placeholder="Enter first name"
+                       autofocus
+                       required
+                       ng-model="firstname"
+                       ng-minlength="2"
+                       ng-maxlength="20"
+                       ng-pattern="/^[a-z]+$/"
+                       class="form-control" />
+                <div class="error-container" ng-show="myForm.firstname.$dirty && myForm.firstname.$invalid">
+                    <small class="error" ng-show="myForm.firstname.$error.required">First name is required.</small>
+                    <small class="error" ng-show="myForm.firstname.$error.minlength">The first name is required to be at least 2 characters.</small>
+                    <small class="error" ng-show="myForm.firstname.$error.maxlength">The first name cannot be longer than 20 characters.</small>
+                    <small class="error" ng-show="myForm.firstname.$error.pattern">Lowercase letters only please for the first name.</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text"
+                       name="lastname"
+                       placeholder="Enter last name"
+                       required
+                       ng-model="lastname"
+                       ng-minlength="3"
+                       ng-maxlength="20"
+                       ng-pattern="/^[A-Z]+$/"
+                       class="form-control" />
+                <div class="error-container" ng-show="myForm.lastname.$dirty && myForm.lastname.$invalid">
+                    <small class="error" ng-show="myForm.lastname.$error.required">Last name is required.</small>
+                    <small class="error" ng-show="myForm.lastname.$error.minlength">The last name is required to be at least 3 characters.</small>
+                    <small class="error" ng-show="myForm.lastname.$error.maxlength">The last name cannot be longer than 20 characters.</small>
+                    <small class="error" ng-show="myForm.firstname.$error.pattern">Uppercase letters only please for the last name.</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email"
+                       name="email"
+                       required
+                       ng-model="email"
+                       class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <button id="save" name="save" class="btn btn-primary" ng-disabled="myForm.$invalid" ng-click="vm.saveData()">Save</button>
+                <button id="cancel" name="cancel" class="btn btn-danger">Cancel</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+
+
+<form id="myForm" name="myForm" ng-submit="vm.saveData()" novalidate>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html ng-app="collegesApp">
+<head>
+    <title>Colleges</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <script src="scripts/angular.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/collegesCtrl.js"></script>
+</head>
+<body ng-controller="CollegesCtrl as vm">
+    <div class="page-header">
+        {{ vm.propertyOne }}'s Colleges
+        <span class="label label-default">{{vm.colleges.items.length}}</span>
+    </div>
+    <div class="panel">
+        <div class="input-group">
+            <input class="form-control" />
+            <span class="input-group-btn">
+                <button class="btn btn-primary">Add</button>
+            </span>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Founding Member</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="college in vm.colleges.items |
+                        orderBy: 'name'">
+                    <td>{{ college.name | uppercase }}</td>
+                    <td>{{ college.city | lowercase }}</td>
+                    <td>{{ college.founder }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
+<!--        {{ 21 + 12}} -->
+
+<!--                        orderBy: 'name' | filter: 'State' ">  -->

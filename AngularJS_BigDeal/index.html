@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html ng-app="collegesApp">
+<head>
+    <title>Colleges</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="app/appACC_05.js"></script>
+    <script src="app/collegesCtrl.js"></script>
+    <script src="app/dataentryCtrl.js"></script>
+    <link href="css/dataentry.css" rel="stylesheet" />  
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Raleigh Code Camp 2014 Example</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/colleges">Colleges</a></li>
+                    <li><a href="#/dataentry">Data Entry</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="main" class="container well well-lg">
+        <div ng-view></div>
+    </div>
+</body>
+</html>
+
+
+
+
+
